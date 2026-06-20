@@ -1,2 +1,2 @@
 export { Snowfall } from "./snowfall"
-export { UserConfig } from '@erikwatson/snowfall'
+export { UserConfig, UserSchedule } from '@erikwatson/snowfall'
