@@ -15,18 +15,18 @@ Generate a config using the [Visual Config Editor](https://erikwatson.github.io/
 Optionally, you can also pass a schedule. 
 
 ```tsx
-import { Snowfall } from "@erikwatson/react-snowfall";
+import { Snowfall, UserConfig, UserSchedule } from "@erikwatson/react-snowfall";
 
 export default function App() {
-  const myConfig = {
+  const myConfig: UserConfig = {
     layers: [{ colour: 'red' }]
   }
   
-  const mySchedule = {
+  const mySchedule: UserSchedule = {
     from: { month: 12, day: 1 },
     to: { month: 12, day: 31 }
   }
-  
+
   return <Snowfall config={myConfig} schedule={mySchedule} />;
 }
 ```
