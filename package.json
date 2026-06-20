@@ -1,6 +1,6 @@
 {
   "name": "@erikwatson/react-snowfall",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A React wrapper for @erikwatson/snowfall",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
