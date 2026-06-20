@@ -15,7 +15,7 @@ import { Snowfall } from "@erikwatson/react-snowfall";
 
 export default function App() {
   const myConfig = {
-    layers: [{ colour: red }]
+    layers: [{ colour: 'red' }]
   }
   return <Snowfall config={myConfig} />;
 }
