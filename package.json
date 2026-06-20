@@ -1,5 +1,5 @@
 {
-  "name": "react-snowfall",
+  "name": "@erikwatson/react-snowfall",
   "version": "1.0.0",
   "description": "A React wrapper for @erikwatson/snowfall",
   "main": "./dist/index.js",
