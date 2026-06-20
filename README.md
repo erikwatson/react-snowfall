@@ -14,6 +14,8 @@ Generate a config using the [Visual Config Editor](https://erikwatson.github.io/
 
 Optionally, you can also pass a schedule. 
 
+Snowfall will create and attach itself to an element with whatever name you pass as the "attachTo" property of the config. By default, it attaches to a div with an id of "snowfall". Apply your styling to this. 
+
 ```tsx
 import { Snowfall, UserConfig, UserSchedule } from "@erikwatson/react-snowfall";
 
