@@ -44,5 +44,8 @@
     "holiday",
     "seasonal",
     "react"
+  ],
+  "files": [
+    "dist"
   ]
 }
