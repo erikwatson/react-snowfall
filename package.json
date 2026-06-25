@@ -18,7 +18,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.11.1",
   "dependencies": {
-    "@erikwatson/snowfall": "^4.1.1"
+    "@erikwatson/snowfall": "^4.3.0"
   },
   "peerDependencies": {
     "react": ">=18",
