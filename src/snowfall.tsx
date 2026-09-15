@@ -1,23 +1,38 @@
 import { useEffect } from "react";
-import snowfall, { DEFAULT_CONTAINER_ID, DEFAULT_USER_CONFIG, UserConfig, UserSchedule } from "@erikwatson/snowfall";
+import * as snowfall from "@erikwatson/snowfall";
+
+import {
+  DEFAULT_CONTAINER_ID,
+  DEFAULT_USER_CONFIG,
+} from "@erikwatson/snowfall";
+
+import type { UserConfig, UserSchedule } from "@erikwatson/snowfall";
 
 type SnowfallConfig = {
-  config: UserConfig,
-  schedule?: UserSchedule
-}
+  config: UserConfig;
+  schedule?: UserSchedule;
+};
 
 const DEFAULT_REACT_SNOWFALL_CONFIG: SnowfallConfig = {
-  config: DEFAULT_USER_CONFIG
-}
+  config: DEFAULT_USER_CONFIG,
+};
 
-export function Snowfall({ config, schedule }: SnowfallConfig = DEFAULT_REACT_SNOWFALL_CONFIG) {
+export function Snowfall({
+  config,
+  schedule,
+}: SnowfallConfig = DEFAULT_REACT_SNOWFALL_CONFIG) {
   useEffect(() => {
-    if(schedule) {
-      snowfall.schedule(schedule, config)
-    } else{
-      snowfall.start(config)
-    }
-  }, [config])
+    const id = config.attachTo ?? DEFAULT_CONTAINER_ID;
+    const el = document.getElementById(id);
 
-  return <div id={config.attachTo ?? DEFAULT_CONTAINER_ID} />
+    if (!el) return;
+
+    if (schedule) {
+      snowfall.schedule(schedule, config);
+    } else {
+      snowfall.start(config);
+    }
+  }, [config, schedule]);
+
+  return <div id="snowfall" />;
 }

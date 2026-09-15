@@ -3,14 +3,13 @@ import { Snowfall, UserConfig, UserSchedule } from "./index";
 
 const myConfig: UserConfig = {
   layers: [
-    {
-      colour: "red",
-    },
+    { colour: "red" },
+    { colour: "green" },
   ],
 };
 
 const mySchedule: UserSchedule = {
-  from: { month: 12, day: 1 },
+  from: { month: 9, day: 16 },
   to: { month: 12, day: 31 },
 };
 
